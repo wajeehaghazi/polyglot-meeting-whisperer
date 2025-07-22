@@ -32,63 +32,39 @@ graph LR
 | Muhammad Abdullah Bilal| Frontend Developer |
 | Fawad Malik            | AI Specialist      |
 
-## 📂 Project Structure
-```
-polyglot-meeting-whisperer/
-├── frontend/            # React application
-│   └── README.md        # Frontend documentation
-├── backend/             # Python WebSocket server
-│   └── README.md        # Backend documentation
-├── LICENSE.md           # MIT License
-└── README.md            # Main project overview (you are here)
-```
-
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js v16+ (frontend)
-- Python 3.8+ (backend)
-- Groq API key (backend)
+- Python 3.8+
+- Groq API key
 
 ### Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/Muhammad-Faizan-Soomro/polyglot-meeting-whisperer.git
+git clone https://github.com/wajeehaghazi/polyglot-meeting-whisperer.git
 cd polyglot-meeting-whisperer
 ```
 
-2. Set up both components:
+2. Set up backend component:
 ```bash
-# Frontend setup
-cd frontend
-npm install
-
-# Backend setup
-cd ../backend
 pip install -r requirements.txt
 ```
 
 3. Configure environment variables:
 ```bash
 # Backend .env file
-echo "GROQ_API_KEY=your_api_key_here" > backend/.env
+echo "GROQ_API_KEY=your_api_key_here" > .env
 ```
 
 4. Run the system:
 ```bash
 # In separate terminals:
 # Terminal 1 - Start backend
-cd backend && python websocket_server.py
+python websocket_server.py
 
 # Terminal 2 - Start frontend
-cd frontend && npm start
+python -m http.server
 ```
-
-## 📚 Detailed Documentation
-| Component | Documentation | Key Technologies |
-|-----------|---------------|------------------|
-| **Frontend** | [Frontend README](frontend/README.md) | React, Tailwind CSS, WebSocket API |
-| **Backend** | [Backend README](backend/README.md) | Python, Whisper, Llama3, WebSockets |
 
 ## 🌟 Key Features Deep Dive
 
